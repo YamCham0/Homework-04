@@ -9,25 +9,15 @@
 // THEN the game is over
 // WHEN the game is over
 // THEN I can save my initials and my score
-//var timer = 0;
 
 
-var secondsLeft = 10;
+// addEventListener()
+// function myFunction() {
+//     document.getElementById("demo").innerHTML = "Hello World";
+//   }
 
-function setTime() {
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timeEl.textContent = secondsLeft + "Game Over";
-    
-    if(secondsLeft === 0) {
-      clearInterval(timerInterval);
-      sendMessage();
-    }
-    
-  }, 1000);
-}
 
-addEventListener()
-function myFunction() {
-    document.getElementById("demo").innerHTML = "Hello World";
-  }
+
+document.getElementById("myBtn").addEventListener("click", function() {
+  $('#demo').text('Hello World!');
+});
