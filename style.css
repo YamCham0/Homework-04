@@ -1,0 +1,17 @@
+* {
+border-radius: 15%;
+font-family:Verdana, Tahoma, sans-serif;
+background-color: darkgreen;
+color: gold;
+}
+
+#strBtn {
+background-color: gold !important;
+}
+
+
+body{
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}

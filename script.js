@@ -17,7 +17,11 @@
 //   }
 
 
+// Change your Buttons
 
-document.getElementById("myBtn").addEventListener("click", function() {
-  $('#demo').text('Hello World!');
+
+
+
+document.getElementById("strtBtn").addEventListener("click", function() {
+  $('#demo').text('Good Luck!');
 });
