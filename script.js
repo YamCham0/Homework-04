@@ -9,19 +9,46 @@
 // THEN the game is over
 // WHEN the game is over
 // THEN I can save my initials and my score
-
-
-// addEventListener()
-// function myFunction() {
-//     document.getElementById("demo").innerHTML = "Hello World";
-//   }
-
-
 // Change your Buttons
+var timerDisplay = document.getElementById('timerDisplay');
+var incorrectAns = document.getElementById('incorrect');
+var strtBtn = document.getElementById("strtBtn");
+var timRem = 60;
+var myQuestions =
+
+
+function strtQuiz(){
+    var timer = setInterval(function(){
+      timRem--;
+      timerDisplay.innerHTML='00:'+timRem;
+      if (timRem < 0) {
+        clearInterval(timer);
+        alert("Game Over!");
+      }  
+      }, 1000);
+}
+
+
+function Penalty() {
+  incorrectAns.addEventListener('click', function() {
+    timRem -= 5;
+  });
+}
 
 
 
 
-document.getElementById("strtBtn").addEventListener("click", function() {
-  $('#demo').text('Good Luck!');
+
+
+
+
+
+strtBtn.addEventListener("click", function() {
+  $('#demo').text("Good Luck!");
+  strtBtn.style.display= 'none'
+
+
+  strtQuiz();
+  Penalty();
 });
+
