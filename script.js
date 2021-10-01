@@ -14,7 +14,18 @@ var timerDisplay = document.getElementById('timerDisplay');
 var incorrectAns = document.getElementById('incorrect');
 var strtBtn = document.getElementById("strtBtn");
 var timRem = 60;
-var myQuestions =
+var myQuestions = [
+  {
+    question: "What HTML stands for?",
+    choices: ["HyperTense Markup Language", "Hotmail", "HyperText Markup Language", "HyperTech Mockup Language"],
+    answer: 2
+  },
+  {
+    question: "What CSS stands for?",
+    choices: ["Central Space Staion", "Cascading Style Sheet", "Color Style Sheet", "Customer Service and Support"],
+    answer: 1
+  }
+];
 
 
 function strtQuiz(){
@@ -35,10 +46,18 @@ function Penalty() {
   });
 }
 
+function Questns() {
+  for (var i = 0; i < myQuestions.length; i++) {
+    var question = myQuestions[i].question;
+    $('#container').text (question);
+    var options = myQuestions[i].choices;
+    document.body.appendChild(document.createElement("br"));
+    
+  }
+  
+}
 
-
-
-
+//need to fix your questions and put them individually and If statement for submit and show nex question
 
 
 
@@ -50,5 +69,6 @@ strtBtn.addEventListener("click", function() {
 
   strtQuiz();
   Penalty();
+  Questns();
 });
 
