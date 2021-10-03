@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    
     <link rel="stylesheet" href="style.css">
   </head>
  
@@ -14,15 +14,23 @@
     <h1>The Ultimate Challenge!</h1>
     
     <div id="timerDisplay"></div>
-    <button id="incorrect">Simulate Incorrect Answer</button>
+
+    <h2 id="firstQuestion">What HTML stands for?</h2>
+
+    <div id="firstAns">
+      <!-- <button class="incorrect">Hotmail</button>
+      <button class="correct">HyperText Markup Language</button>
+      <button class="incorrect">HyperTech Mockup Language</button> -->
+    </div>
+    
     <container id="container">
       <div>
-        <button id="strtBtn" type="button">Start Quiz!</button>
+        <button onclick="firstQ()" id="strtBtn" type="button">Start Quiz!</button>
         <p id="demo"></p>
       </div>
-      <div>
+      <!-- <div>
         <button id="nxtBtn" type="button">Next</button>
-      </div>
+      </div> -->
     </container>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

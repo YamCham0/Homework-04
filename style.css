@@ -23,3 +23,17 @@ div {
     justify-content: center;
 
 }
+
+h2 {
+    border-style: solid;
+    border-color: rgba(2, 167, 51, 0.877);
+    text-align: center;
+    align-content: center;
+}
+
+
+#firstAns {
+position: relative;
+top: auto;
+left: auto;
+}

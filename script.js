@@ -11,21 +11,49 @@
 // THEN I can save my initials and my score
 // Change your Buttons
 var timerDisplay = document.getElementById('timerDisplay');
-var incorrectAns = document.getElementById('incorrect');
+var correctAns = document.body.getElementsByClassName('correct');
+var incorrectAns = document.body.getElementsByClassName('incorrect');
 var strtBtn = document.getElementById("strtBtn");
 var timRem = 60;
-var myQuestions = [
-  {
-    question: "What HTML stands for?",
-    choices: ["HyperTense Markup Language", "Hotmail", "HyperText Markup Language", "HyperTech Mockup Language"],
-    answer: 2
-  },
+var question1 = document.getElementById("firstQuestion");
+var question2 = [
   {
     question: "What CSS stands for?",
     choices: ["Central Space Staion", "Cascading Style Sheet", "Color Style Sheet", "Customer Service and Support"],
     answer: 1
   }
 ];
+
+
+function firstQ() {
+  var node = document.createElement("button");
+  var textNode = document.createTextNode("HyperTense Markup Language")
+  node.appendChild(textNode);
+  document.getElementById("firstAns").appendChild(node);
+
+  var node = document.createElement("button");
+  var textNode = document.createTextNode("Hotmail")
+  node.appendChild(textNode);
+  document.getElementById("firstAns").appendChild(node);
+
+  var node = document.createElement("button");
+  var textNode = document.createTextNode("HyperText Markup Language")
+  node.appendChild(textNode);
+  document.getElementById("firstAns").appendChild(node);
+
+  var node = document.createElement("button");
+  var textNode = document.createTextNode("HyperTech Mockup Language")
+  node.appendChild(textNode);
+  document.getElementById("firstAns").appendChild(node);
+
+
+
+
+
+
+
+}
+
 
 
 function strtQuiz(){
@@ -47,15 +75,16 @@ function Penalty() {
 }
 
 function Questns() {
-  for (var i = 0; i < myQuestions.length; i++) {
-    var question = myQuestions[i].question;
-    $('#container').text (question);
-    var options = myQuestions[i].choices;
-    document.body.appendChild(document.createElement("br"));
+  // for (var i = 0; i < myQuestions.length; i++) {
+  var question = question1
+  $('#container').text (question);
+  // var options = myQuestions[0].choices;
+  // document.body.appendChild(document.createElement("br"));
     
-  }
-  
 }
+  
+
+// Choices function
 
 //need to fix your questions and put them individually and If statement for submit and show nex question
 
