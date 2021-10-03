@@ -25,38 +25,42 @@ var question2 = [
 ];
 
 
-function firstQ() {
+// Choices function
+function firstChoice() {
   var node = document.createElement("button");
   var textNode = document.createTextNode("HyperTense Markup Language")
   node.appendChild(textNode);
   document.getElementById("firstAns").appendChild(node);
+  node.classList.add("incorrect");
+};
 
+function secChoice() {
   var node = document.createElement("button");
   var textNode = document.createTextNode("Hotmail")
   node.appendChild(textNode);
   document.getElementById("firstAns").appendChild(node);
+  node.classList.add("incorrect");
+}; 
 
+function thrdChoice() {
   var node = document.createElement("button");
   var textNode = document.createTextNode("HyperText Markup Language")
   node.appendChild(textNode);
   document.getElementById("firstAns").appendChild(node);
-
+  node.classList.add("correct");
+};    
+function fourthChoice() {
   var node = document.createElement("button");
   var textNode = document.createTextNode("HyperTech Mockup Language")
   node.appendChild(textNode);
   document.getElementById("firstAns").appendChild(node);
+  node.classList.add("incorrect");
+};
 
 
 
 
-
-
-
-}
-
-
-
-function strtQuiz(){
+function strtQuiz() {
     var timer = setInterval(function(){
       timRem--;
       timerDisplay.innerHTML='00:'+timRem;
@@ -65,26 +69,26 @@ function strtQuiz(){
         alert("Game Over!");
       }  
       }, 1000);
-}
+};
 
 
-function Penalty() {
-  incorrectAns.addEventListener('click', function() {
-    timRem -= 5;
-  });
-}
+function penalty() {
+  document.getElementsByClassName('incorrect').addEventListener('click', function() {
+    sec -= 5;
+    document.getElementById('timerDisplay').innerHTML='00:'+sec;
+  })
+};
 
-function Questns() {
-  // for (var i = 0; i < myQuestions.length; i++) {
-  var question = question1
-  $('#container').text (question);
-  // var options = myQuestions[0].choices;
-  // document.body.appendChild(document.createElement("br"));
+// function Questns() {
+//   // for (var i = 0; i < myQuestions.length; i++) {
+//   var question = question1
+//   $('#container').text (question);
+//   // var options = myQuestions[0].choices;
+//   // document.body.appendChild(document.createElement("br"));
     
-}
+// }
   
-
-// Choices function
+// Append the First question on click
 
 //need to fix your questions and put them individually and If statement for submit and show nex question
 
@@ -94,10 +98,11 @@ function Questns() {
 strtBtn.addEventListener("click", function() {
   $('#demo').text("Good Luck!");
   strtBtn.style.display= 'none'
-
-
+  
   strtQuiz();
-  Penalty();
-  Questns();
+  firstChoice();
+  secChoice();
+  thrdChoice();
+  fourthChoice();
+  penalty();
 });
-
