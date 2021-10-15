@@ -24,37 +24,64 @@ var question2 = [
   }
 ];
 
+var bntClick = document.getElementById("bntClick")
 
+// incorrect is defined wrong
+// I need to do the variable inside my function
 // Choices function
 function firstChoice() {
-  var node = document.createElement("button");
+  var createBtn = document.createElement("button");
   var textNode = document.createTextNode("HyperTense Markup Language")
-  node.appendChild(textNode);
-  document.getElementById("firstAns").appendChild(node);
-  node.classList.add("incorrect");
+  createBtn.appendChild(textNode);
+  document.getElementById("firstAns").appendChild(createBtn);
+  createBtn.classList.add("incorrect");
+  createBtn.onclick = penQu;
 };
 
+
+function penQu() {
+  timRem -= 5;
+  console.log("squirrel");
+
+};
+
+// for (var index = 0; index < "Array"(not an actual string just an example).length; --1)
+
+//Heyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy Start HEreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee when your back!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//selecting correct answer will take to the next question saying Correct!
+//write a second set of question and answers (basically copy paste previous questions)
+//rinse and repeat
+// m
+
+
+//separate bunt click from penalty function
+
+
 function secChoice() {
-  var node = document.createElement("button");
+  //var incorrectAns = document.body.getElementsByClassName('incorrect');
+  var createBtn = document.createElement("button");
   var textNode = document.createTextNode("Hotmail")
-  node.appendChild(textNode);
-  document.getElementById("firstAns").appendChild(node);
-  node.classList.add("incorrect");
+  createBtn.appendChild(textNode);
+  document.getElementById("firstAns").appendChild(createBtn);
+  createBtn.classList.add("incorrect");
+  createBtn.onclick = penQu;
 }; 
 
+
 function thrdChoice() {
-  var node = document.createElement("button");
+  var createBtn = document.createElement("button");
   var textNode = document.createTextNode("HyperText Markup Language")
-  node.appendChild(textNode);
-  document.getElementById("firstAns").appendChild(node);
-  node.classList.add("correct");
+  createBtn.appendChild(textNode);
+  document.getElementById("firstAns").appendChild(createBtn);
+  createBtn.classList.add("correct");
 };    
 function fourthChoice() {
-  var node = document.createElement("button");
+  var createBtn = document.createElement("button");
   var textNode = document.createTextNode("HyperTech Mockup Language")
-  node.appendChild(textNode);
-  document.getElementById("firstAns").appendChild(node);
-  node.classList.add("incorrect");
+  createBtn.appendChild(textNode);
+  document.getElementById("firstAns").appendChild(createBtn);
+  createBtn.classList.add("incorrect");
+  createBtn.onclick = penQu;
 };
 
 
@@ -74,8 +101,9 @@ function strtQuiz() {
 
 function penalty() {
   document.getElementsByClassName('incorrect').addEventListener('click', function() {
-    sec -= 5;
-    document.getElementById('timerDisplay').innerHTML='00:'+sec;
+    timRem -= 5;
+    document.getElementById('timerDisplay').innerHTML='00:'+timRem;
+    
   })
 };
 
@@ -95,6 +123,10 @@ function penalty() {
 
 
 
+
+
+
+
 strtBtn.addEventListener("click", function() {
   $('#demo').text("Good Luck!");
   strtBtn.style.display= 'none'
@@ -104,5 +136,5 @@ strtBtn.addEventListener("click", function() {
   secChoice();
   thrdChoice();
   fourthChoice();
-  penalty();
+  // penalty();
 });
