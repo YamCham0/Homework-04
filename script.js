@@ -62,6 +62,7 @@ function thrdChoiceQ1() {
   createBtn.appendChild(textNode);
   document.getElementById("firstAns").appendChild(createBtn);
   createBtn.classList.add("correct");
+  createBtn.onclick = secondQuestion;
 };
 
 function fourthChoiceQ1() {
@@ -92,6 +93,7 @@ function secChoiceQ2() {
   createBtn.appendChild(textNode);
   document.getElementById("secondAns").appendChild(createBtn);
   createBtn.classList.add("correct");
+  createBtn.onclick = 
 };
 
 function thrdChoiceQ2() {
@@ -113,27 +115,29 @@ function fourthChoiceQ2() {
 };
 
 
-// Penalty fuction that subtracs 5 secs when wrong answer is clicked
+// Penalty fuction that subtracts 5 secs when wrong answer is clicked.
 function penalty() {
   timRem -= 5;
     console.log("squirrel");
   
   };
 
-
-
-
-// On click function to make submission of correct answer to display the the Second Question and the second set of choices.
-  $( "#correct" ).click(function() {
-    alert( "Handler for .click() called." );
-    $('#secondQuestion').text("What CSS stands for?");
+function secondQuestion() {
+  let firstAns = document.getElementById("firstAns")
+  firstAns.style.display= 'none'
+  question1.style.display= 'none'
+  $('#secondQuestion').text("What CSS stands for?");
     firstChoiceQ2();
     secChoiceQ2();
     thrdChoiceQ2();
     fourthChoiceQ2();
-  });
+  };
 
 
+// On click function to make submission of correct answer to display the the Second Question and the second set of choices.
+// $( ".correct" ).click(secondQuestion());
+// Which of the 2 formats????? Look up!
+  
 
   //Heyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy Start HEreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee when your back!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //selecting correct answer will take to the next question saying Correct!
@@ -149,14 +153,20 @@ strtBtn.addEventListener("click", function() {
   $('#demo').text("Good Luck!");
   strtBtn.style.display= 'none'
   $('#firstQuestion').text("What HTML stands for?");
-  
-  
-  
-  
-  
-  
   strtQuiz();
   q1Choices();
   
   // penalty();
 });
+
+// secondQuestion() {
+//   $('#secondQuestion').text("What CSS stands for?")
+// }
+
+
+
+// correctAns.addEventListener("click", function() {
+//   $('#secondQuestion').text("What CSS stands for?");
+//   firstChoiceQ2();
+// });
+
