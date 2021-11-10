@@ -1,8 +1,7 @@
 
-// WHEN I answer a question
-// THEN I am presented with another question
-// WHEN I answer a question incorrectly
-// THEN time is subtracted from the clock
+
+
+
 // WHEN all questions are answered or the timer reaches 0
 // THEN the game is over
 // WHEN the game is over
@@ -93,8 +92,9 @@ function secChoiceQ2() {
   createBtn.appendChild(textNode);
   document.getElementById("secondAns").appendChild(createBtn);
   createBtn.classList.add("correct");
-  createBtn.onclick = 
+  createBtn.onclick = win;
 };
+// Here to add more Questions in the future.
 
 function thrdChoiceQ2() {
   var createBtn = document.createElement("button");
@@ -134,23 +134,26 @@ function secondQuestion() {
   };
 
 
-// On click function to make submission of correct answer to display the the Second Question and the second set of choices.
-// $( ".correct" ).click(secondQuestion());
-// Which of the 2 formats????? Look up!
-  
 
-  //Heyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy Start HEreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee when your back!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//selecting correct answer will take to the next question saying Correct!
-//and making the old questions disappear
-//write a second set of question and answers (basically copy paste previous questions)
-//rinse and repeat
+
+  function win() {
+    var person = prompt("You Won!", "Initials here!");
+    if (person != null) {
+      document.getElementById("promptData").innerHTML =
+      "Good job " + person + "! Wanna play again?";
+    }
+  }
+
+
+
+
 
 
 
 
 
 strtBtn.addEventListener("click", function() {
-  $('#demo').text("Good Luck!");
+  $('#init').text("Good Luck!");
   strtBtn.style.display= 'none'
   $('#firstQuestion').text("What HTML stands for?");
   strtQuiz();
