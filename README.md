@@ -12,4 +12,4 @@
 
 [Link to the Quiz](https://yamcham0.github.io/Homework-04/)
 
-![Screenshot of the Quiz main page.](assets\images\Quiz.png)
+![Screenshot of the Quiz main page.](./assets/images/Quiz.png)
