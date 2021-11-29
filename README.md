@@ -10,6 +10,6 @@
 * *You'll be able to save your initials*
 
 
-[Link to the Quiz](https://yamcham0.github.io/Homework-04/)
+[Link to the Quiz](https://yamcham0.github.io/Test-your-Might/)
 
 ![Screenshot of the Quiz main page.](./assets/images/Quiz.png)
